@@ -4,6 +4,8 @@ import java.util.*;
 
 public class Picker {
 
+    //adding comment for feature
+
     public int pick(HashMap<String, List<Integer>> data){
 
         List<Integer> allDays = new ArrayList<>();
@@ -15,7 +17,7 @@ public class Picker {
         return getMode(allDays);
     }
 
-    private int getMode(List list){
+    private int getMode(List<Integer> list){
 
         Collections.sort(list);
         int mostFrequentNumber = 0;
