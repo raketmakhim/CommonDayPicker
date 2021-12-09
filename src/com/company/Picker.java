@@ -23,11 +23,11 @@ public class Picker {
 
         int mostFrequentNumberCounter = 0;
 
-        int numberCounter ;
+        int currentNumberCounter ;
 
         for(int i = 0; i < list.size();){
 
-            numberCounter = 1;
+            currentNumberCounter = 1;
 
             String currentNumber = list.get(i).toString();
 
@@ -35,7 +35,7 @@ public class Picker {
 
                 if (i + 1 != list.size()
                         && list.get(i).equals(list.get(j+1))) {
-                    numberCounter++;
+                    currentNumberCounter++;
                 }
                 else {
                     j = list.size();
@@ -43,8 +43,8 @@ public class Picker {
                 i++;
             }
 
-            if (numberCounter > mostFrequentNumberCounter){
-                mostFrequentNumberCounter = numberCounter;
+            if (currentNumberCounter > mostFrequentNumberCounter){
+                mostFrequentNumberCounter = currentNumberCounter;
                 mostFrequentNumber = Integer.valueOf(currentNumber);
             }
         }
