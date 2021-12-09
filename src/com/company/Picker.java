@@ -4,8 +4,6 @@ import java.util.*;
 
 public class Picker {
 
-    //adding comment for feature
-
     public int pick(HashMap<String, List<Integer>> data){
 
         List<Integer> allDays = new ArrayList<>();
@@ -20,13 +18,14 @@ public class Picker {
     private int getMode(List<Integer> list){
 
         Collections.sort(list);
+
         int mostFrequentNumber = 0;
 
         int mostFrequentNumberCounter = 0;
 
         int numberCounter ;
 
-        for(int i = 0; i < list.size(); i+=numberCounter){
+        for(int i = 0; i < list.size();){
 
             numberCounter = 1;
 
@@ -41,9 +40,10 @@ public class Picker {
                 else {
                     j = list.size();
                 }
-
+                i++;
             }
-            if (mostFrequentNumberCounter < numberCounter){
+
+            if (numberCounter > mostFrequentNumberCounter){
                 mostFrequentNumberCounter = numberCounter;
                 mostFrequentNumber = Integer.valueOf(currentNumber);
             }
